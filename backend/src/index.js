@@ -1,3 +1,4 @@
+require('dotenv/config');
 const express = require('express');
 const mongoose = require('mongoose');
 const routes = require('./routes');
@@ -14,7 +15,7 @@ app.use(cors());
 
 // CONECTANDO AO BANCO
 
-mongoose.connect('mongodb+srv://jefferson:dimaria7@cluster0-gxcct.mongodb.net/week?retryWrites=true&w=majority',{
+mongoose.connect(process.env.MONGO_URL,{
     useNewUrlParser: true,
     useUnifiedTopology: true
 });

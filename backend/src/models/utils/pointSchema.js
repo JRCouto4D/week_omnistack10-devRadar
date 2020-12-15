@@ -1,3 +1,4 @@
+require('dotenv/config');
 const mongoose = require('mongoose');
 
 const PointSchema = new mongoose.Schema({
